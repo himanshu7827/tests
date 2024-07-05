@@ -1,0 +1,258 @@
+/* 
+
+
+
+.noImage {background: url(../images/noimage.png) no-repeat scroll center center #fff !important;color: #535353;font-weight: bold;	line-height: normal;	text-align: center;	text-transform: uppercase;}
+body{ background:#f8f8f8; float:left;width:100%; }
+
+#logo{float: left; margin-top: -16px;}
+
+*****************************header css start**********************************
+.header{ background:#FFF;padding-top:30px; float:left; width:100%;}
+
+ul.mainNavigation{ margin:0; padding:0; float:right;}
+ul.mainNavigation li a{ font-size:17px; color:#515355; margin:0;
+padding:0 0 28px 0; border-bottom:3px solid transparent;}
+ul.mainNavigation li{ margin:0 0 0 38px;}
+ul.mainNavigation li a:hover{ border-bottom:3px solid #243960; background:#FFF; }
+ul.mainNavigation li.active a{ border-bottom:3px solid #243960;}
+.marginBottom{ margin-bottom:0 !important; }
+.paddingTop{ padding-top:0 !important; }
+.banner{ width:100%; float:left; position:relative;}
+.banner img{ width:100%;}
+.bannerText{ position:absolute; bottom:48px;}
+.bannerText h2{ background:url(../images/transparent-black-bg.png) repeat; font-size:60px;color:#FFF;padding: 18px 38px 25px;display:inline-block; margin:0;}
+.bannerText p{ font-size:26px; color:#243960; display:inline-block; background:url(../images/transparent-white-bg.png) repeat;    padding: 25px 40px 20px;}
+*****************************header css end**********************************
+
+
+*****************************content css start**********************************
+
+.content{ float: left;
+    padding-top: 60px;
+    width: 100%;}
+.about p{text-align:justify; line-height:20px; }
+.about h3{  font-size:18px; padding-bottom:15px; margin:0;}
+ul.about{ padding:1px 0 0 0; margin:0;}
+ul.about li{  font-size:14px; list-style:none; padding-bottom:16px;}
+h1.heading{ background:url(../images/heading-bdr.png) repeat-x left top; display:inline-block;  padding: 28px 0 14px; font-size:44px; color:#515355; margin:0;}
+h2.heading{ background:url(../images/heading-bdr.png) repeat-x left top; display:inline-block;  padding: 28px 0 ;color:#0C1D26; margin:0;}
+.content ul li span.roundedBdr{background:#FFF; border-radius:100%; height:30px; width:30px; border:3px solid #243960;float:left; text-align:center; color:#243960; font-size:18px;}
+a.readMore{ font-size:16px; color:#243960; border-top:1px solid #dfdfdf; padding-top:4px; margin-top:8px; display:inline-block;}
+a.roundBtn{background:url(../images/arrow.png) no-repeat 92% 56% #243960;
+    border: medium none;
+    border-radius: 25px;
+    color: #fff;
+    margin-top: 5px;
+       padding: 4px 20px 4px 14px;
+    text-decoration: none; cursor:pointer;}
+
+	
+a.roundBtn:hover{ ackground:url(../images/arrow.png) no-repeat 92% 56% #243960}
+.services {  margin-top: 9px;}
+.services  p{ color:#515355; font-size:15px; line-height:20px; border-bottom:1px solid #e5e5e5; padding-bottom:14px; margin-bottom:15px;}
+.services  h3{ font-size:18px; color:#243960; margin:0; padding-bottom:10px;}
+.services h2.heading{ padding-bottom:24px !important; float:left; padding-top:22px;}
+.borderThumb{ border:none; padding:0;box-shadow:1px 2px 6px #eaeaea;}
+.testimonial{margin-top: 40px;
+  padding: 60px 0 44px;}
+.testimonial p{color:#000000; font-size:14px; padding-left:0px;}
+.testimonial h2{ color:#ffffff; font-size:44px; padding-bottom:25px; padding-top:23px;}
+.testimonial p.colon{top; font-size:18px; padding-top:20px;}
+.partners { float:left; width:100%; margin-top:60px; padding-bottom:50px;}
+.partners ul{ float:left; width:100%; margin-top:27px;padding:inherit;}
+.partners ul li {float:left; list-style:none;text-align:center;margin-bottom:15px; }
+.partners ul li a {display:inline-block;float:none;width:100%;max-width:180px;}
+.partners ul li img {border:4px solid #eeeeee;width:100%;max-width:300px;}
+.partners ul li.last{ margin-right:0;}
+.thumbnail .caption h4{ color:#243960;}
+.thumbnail .caption p{ border-bottom:1px solid #e5e5e5; padding-bottom:15px;font-size:15px; color:515355; }
+
+===============standard content ====================
+.standard-content{ float:left; width:100%;}
+.innerpagecontainer {width:100%;float:left; margin-bottom:40px;}
+.innerpagecontainer h1 { padding-bottom:10px; margin-bottom:0px;}
+.innerpagecontainer h2 { color: #262626; font-size: 30px; font-weight:normal; margin:0px; padding:10px 0 6px; float:left; width:100%;}
+.innerpagecontainer h4 { color: #262626; font-size: 22px; font-weight:normal; margin:0px; padding:0px 0px 6px 0px; float:left; width:100%; line-height:30px;}
+.innerpagecontainer p{ color:#4c4c4c; font-size:15px; line-height:24px; margin:0 0 18px 0;}
+.innerpagecontainer p a{ text-decoration:none; color:#243960; font-size:15px; }
+.innerpagecontainer p a:hover{ color:#3c3c3c; text-decoration:underline;}
+.innerpagecontainer .media { float: left; margin:0px;}
+.innerpagecontainer .media-left{ margin-right:15px; float:left;}
+.innerpagecontainer .highlight{ color:#243960; font-style:italic;}
+.innerpagecontainer .highlight span{ color:#000; font-style:normal;}
+.innerpagecontainer .listing { float: left;	padding:0; margin:0;}
+.innerpagecontainer .listing li:hover{ color:#243960;}
+.innerpagecontainer .listing li {background: url(../images/roundBult.png) no-repeat scroll left 8px; color: #4c4c4c; float: none; font-size: 14px; font-weight:600; line-height: 22px; list-style: outside none none; padding: 0 0 12px 16px;}
+.innerpagecontainer .listing02 { float: left; padding:0; margin:0;}
+.innerpagecontainer .listing02 li {background: url(../images/arrowBult.png) no-repeat scroll left 8px; color: #4c4c4c; float: none; font-size: 14px; line-height: 22px; list-style: outside none none;  padding: 0 0 12px 16px;}
+.innerpagecontainer .listing02 li:hover{ color:#243960;}
+.innerpagecontainer .dummytextdiv { background:url(../images/mid-bdr.jpg) repeat-y 49.8% #243960; float: left; margin: 30px 0; width: 100%;	padding:2%; box-sizing:border-box;}
+.innerpagecontainer .dummytextdiv h2{font-size: 28px; text-transform: uppercase; color: #f1f1f1; padding-bottom:15px;}
+.innerpagecontainer .dummytextdiv p{ color: #a3a3a3;}
+
+===============standard form ====================
+
+.address { background: none repeat scroll 0 0 #243960; box-sizing: border-box; float: left; margin: 0 0 30px; padding: 2.5% 3%; width: 100%;}
+.lftblock { float: left; margin-right: 6%; width: 65%;}
+.lftblock h4 { color: #fff; font-size: 28px; text-transform: uppercase;}
+.lftblock p { color: #fff; margin: 10px 0;}
+.fullwidth { clear: left; width: 100%;}
+.lftblock em { color: #ccc; float: left; font-size: 15px; line-height: 24px; margin: 0; width: 49%;}
+.lftblock ul {width:100%;float:left;display:table;padding:0;}
+.lftblock ul li {display:table-cell;float:none;vertical-align:top;word-wrap: break-word;word-break:break-all}
+.lftblock ul li.first {width:30px;}
+ 
+
+.lftblock em a{ color:#155bdb;word-break:break-all;word-wrap:break-word;}
+.lftblock em a:hover{ color:#fff;}
+.rightblock { float: left; margin: 0; width: 29%;}
+.message-bar { background: none repeat scroll 0 0 #727072; color: #ffffff; float: left; font-size: 14px; margin: 0 0 20px;   padding: 0; width: 100%;}
+.message-bar span.pos { background: url("../images/click.png") no-repeat scroll 11px 10px rgba(0, 0, 0, 0); display: block;   float: left; font-size: 14px; padding: 10px 40px; width: auto;}
+.inputform { float: left; margin-bottom: 20px; margin-right: 6%; width: 47%;}
+.inputform label { color: #5f5f5f; float: left; font-size: 15px; font-weight: normal; margin: 8px 0 0; width: 24%;}
+.inputform .input { border: 2px solid #cfcfcf; color: #5f5f5f; float: left; font-size: 14px; font-weight: 300; padding: 8px 10px; width: 75%;}
+.inputform select { border: 2px solid #cfcfcf; color: #5f5f5f;font-size: 14px;font-weight: 300; padding: 9px 10px; width: 75%;}
+.radiobtn { float: left; line-height: 20px; margin: 11px 0 0;}
+.radiobtn input { margin-right: 3px !important;}
+.radiobtn span { color: #5f5f5f; font-size: 15px; margin: 0 18px 0 0;}
+.mRr { margin-right: 0;}
+.textareaB { width: 100%;}
+.textareaB label {color: #5f5f5f; float: left; font-size: 15px; font-weight: normal; margin: 8px 0 0; width: 11%;}
+.textareaB textarea { border: 2px solid #cfcfcf; color: #5f5f5f; font-size: 14px; font-weight: 300; height: 118px; padding: 8px 10px; resize: none; width: 88.5%;}
+.textareaB .submit { margin: 20px 0 0 11%;background:url(../images/arrow.png) no-repeat 92% 53% #243960;    
+ display: inline-block; font-size: 16px; color: #262626; color: #ffffff;
+font-size: 17px; padding:4px 20px 4px 14px; border-radius:25px;}
+.textareaB .submit:hover{  background:url(../images/arrow.png) no-repeat 92% 53% #204d74; color: #ffffff;}
+
+.innerBanner {
+	background:url(../images/inner_banner.jpg) no-repeat top center;
+    background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	-moz-background-size: cover;
+    float: left;
+    width: 100%;
+	height:100px;
+	margin-bottom:20px;
+}
+
+
+*****************************content css ends**********************************
+
+*****************************footer css ends**********************************
+.footer{ width:100%; float:left; background:#393939; padding:56px 0;}
+.footer h3{ color:#FFF; font-size:30px; margin:0; padding-bottom:17px;}
+.footer p{ color:#FFF; font-size:15px; line-height:20px;}
+.footerLogo {max-width:300px;margin-bottom:15px;}
+p.copyRight{ font-size:12px; color:#9a9a9a; margin-top:18px;}
+p.copyRight a{ text-decoration:none; color:#ffffff; font-size:12px;}
+p.copyRight a:hover{ color:#9a9a9a; text-decoration:underline; }
+.footer ul{ margin:0; padding:0;}
+.footer ul li { background:url(../images/list-icon.png) no-repeat left 6px; list-style:none; padding-left:16px; padding-bottom:8px;}
+.footer ul li a{ font-size:15px; color:#f8f8f8;}
+.footer ul li.active a {text-decoration:underline;}
+.location p{ background:url(../images/location.png) no-repeat left 3px; padding-left:27px; }
+.topPhone p{padding-left:30px; font-size:15px; color:#f8f8f8; color:#515355; }
+.phone p{ background:url(../images/phone.png) no-repeat left top; padding-left:30px; }
+.fax p{ background:url(../images/fax.png) no-repeat left top; padding-left:30px;}
+.footer h4{ color:#989898; font-size:18px; margin: 0;
+    padding-bottom: 22px;}
+
+
+
+*****************************footer css ends**********************************
+
+
+*****************************Mohini css start **********************************
+.imgsize
+{
+	width:503px;
+	height:303px;
+	}
+	.heading
+	{
+		background:url(../images/heading-bdr.png) repeat-x left top;/
+		display:inline-block; 
+		padding: 28px 0;
+		color:#0C1D26;
+		margin:0;
+		line-height:25px;
+		margin-top:40px;
+		}
+		marginTop
+		{
+						margin-top:30px;
+			}
+			 
+
+
+ * See it in action here: http://jsfiddle.net/seydoggy/6s92p51a/
+
+.panel-table {
+    display:table;
+}
+.panel-table > .panel-heading {
+    display: table-header-group;
+    background: transparent;
+}
+.panel-table > .panel-body {
+    display: table-row-group;
+}
+.panel-table > .panel-body:before,
+.panel-table > .panel-body:after {
+    content:none;
+}
+.panel-table > .panel-footer {
+    display: table-footer-group;
+    background: transparent;
+}
+.panel-table > div > .tr {
+    display: table-row;
+}
+.panel-table > div:last-child > .tr:last-child > .td {
+    border-bottom: none;
+}
+.panel-table .td {
+    display: table-cell;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-left: none;
+}
+.panel-table .td:last-child {
+    border-right: none;
+}
+.panel-table > .panel-heading > .tr > .td,
+.panel-table > .panel-footer > .tr > .td {
+    background-color: #f5f5f5;
+}
+.panel-table > .panel-heading > .tr > .td:first-child {
+    border-radius: 4px 0 0 0;
+}
+.panel-table > .panel-heading > .tr > .td:last-child {
+    border-radius: 0 4px 0 0;
+}
+.panel-table > .panel-footer > .tr > .td:first-child {
+    border-radius: 0 0 0 4px;
+}
+.panel-table > .panel-footer > .tr > .td:last-child {
+    border-radius: 0 0 4px 0;
+}
+.spantext
+{
+	font-size:18px;
+	color:#2C87C2;
+	margin-bottom:10px;
+	}
+	
+	.margin-top
+	{
+		margin-top:10px;
+		}
+
+	
+	
+
+	
+*****************************Mohini css end********************************** */

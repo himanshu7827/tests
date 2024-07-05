@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+           http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+
+	<!-- Drives transactions using local JPA APIs -->
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="in.pms.*" />			
+		<property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter" />
+		<property name="jpaProperties">
+			<value> 
+				# Tooling
+				hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+				hibernate.hbm2ddl.auto=update
+				hibernate.bytecode.provider=cglib
+
+				# Debugging / logging
+				hibernate.show_sql=false
+				hibernate.format_sql=false
+				hibernate.use_sql_comments=false
+				hibernate.generate_statistics=false
+
+				# Auto-detect annotated JPA entities
+				hibernate.archive.autodetection=class
+
+				</value>
+		</property>
+	</bean>
+
+     <jpa:repositories base-package="in.pms.global.domain" />
+     <jpa:repositories base-package="in.pms.master.domain" />         
+          <jpa:repositories base-package="in.pms.login.domain" />         
+     
+     
+	<bean id="dataSourceTarget" class="org.apache.tomcat.dbcp.dbcp2.BasicDataSource"
+		destroy-method="close">
+
+		<property name="driverClassName" value="org.postgresql.Driver" />
+	 
+		<!-- Needs to be changed PMS_09052019-->
+	 	<property name="url" value="jdbc:postgresql://devEgovPMS.dcservices.in:5432/PMS_18092023"/>
+		<property name="username" value="pms" />
+		<property name="password" value="Pms123" /> 
+		<!-- Connection Pooling DBCP -->
+		<property name="initialSize" value="25" />
+		<property name="poolPreparedStatements" value="true" />
+		<property name="defaultAutoCommit" value="false" />
+	</bean>
+	
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">
+		<property name="targetDataSource" ref="dataSourceTarget" />
+	
+	</bean>
+
+	<bean id="hibernateJpaVendorAdapter"
+		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+		<property name="showSql" value="true" />
+		<property name="generateDdl" value="true" />		
+	</bean>
+
+ <jpa:repositories  base-package="in.pms" entity-manager-factory-ref="entityManagerFactory"/> 
+
+
+</beans>

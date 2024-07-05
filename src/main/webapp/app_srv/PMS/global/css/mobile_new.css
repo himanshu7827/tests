@@ -1,0 +1,327 @@
+@media ( max-width :320px) {
+}
+
+@media ( max-width :375px) and (min-width: 321px) {
+}
+
+@media ( max-width :480px) and (min-width: 376px) {
+}
+
+@media ( max-width :640px) and (min-width: 481px) {
+	.sub {
+		height: 300px;
+		overflow:auto;
+	}
+		.sub::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sub::-webkit-scrollbar-track {
+  background: #807d7d; 
+}
+ 
+/* Handle */
+.sub::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.sub::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+}
+
+@media ( max-width :768px) and (min-width: 641px) {
+	#sidebar {
+		width: 185px;
+	}
+	ul.top-menu {
+		margin-right: 0px !important;
+	}
+	p.title_pms {
+		font-size: 23px;
+		color: #6481c5;
+		font-family: Archivo Narrow;
+		font-weight: 600;
+	}
+	.header-right-left {
+		font-size: 12px;
+	}
+	.sub {
+		height: 300px;
+		overflow:auto;
+	}
+		.sub::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sub::-webkit-scrollbar-track {
+  background: #807d7d; 
+}
+ 
+/* Handle */
+.sub::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.sub::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+	p.title_pms {
+    font-size: 18px;
+    color:  #6481c5;
+    font-family: Archivo Narrow;
+    font-weight: 600;
+}
+li.dropdown.head-dpdn a.dropdown-toggle {
+    padding: 0px;
+}
+	
+}
+
+@media ( max-width :800px) and (min-width: 769px) {
+	p.title_pms {
+		font-size: 19px;
+		color: #6481c5;
+		font-family: Archivo Narrow;
+		font-weight: 600;
+	}
+	.pms_sub_heading{
+	font-size:10px;
+	}
+	li.dropdown.head-dpdn a.dropdown-toggle {
+    padding: 0px;
+}
+	.sub {
+		height: 300px;
+		overflow:auto;
+	}
+		.sub::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sub::-webkit-scrollbar-track {
+  background: #807d7d; 
+}
+ 
+/* Handle */
+.sub::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.sub::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+	#sidebar {
+		width: 185px;
+	}
+	ul.top-menu {
+		margin-right: 0px;
+	}
+}
+
+@media ( max-width :991px) and (min-width: 801px) {
+	.sub {
+		height: 300px;
+		overflow:auto;
+	}
+		.sub::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sub::-webkit-scrollbar-track {
+  background: #807d7d; 
+}
+ 
+/* Handle */
+.sub::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.sub::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 992px) {
+	#sidebar {
+		width: 185px;
+	}
+	.brand {
+		background: #dc964d;
+		float: left;
+		width: 170px;
+		height: 90px;
+		position: relative;
+	}
+	.text {
+		padding-top: 10px;
+		font-size: 14px;
+	}
+	.market-update-right i.fa.fa-file-text-o {
+		font-size: 22px;
+		color: #fff;
+		width: 40px;
+		height: 40px;
+		background: #05b0a0;
+		text-align: center;
+		border-radius: 49px;
+		-webkit-border-radius: 49px;
+		-moz-border-radius: 49px;
+		-o-border-radius: 49px;
+		line-height: 1.7em;
+	}
+	.sub {
+		height: 300px;
+		overflow:auto;
+	}
+		.sub::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sub::-webkit-scrollbar-track {
+  background: #807d7d; 
+}
+ 
+/* Handle */
+.sub::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.sub::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+}
+
+@media ( max-width :1151px) and (min-width: 1025px) {
+	.sub {
+		height: 300px;
+		overflow:auto;
+	}
+}
+
+@media ( max-width :1280px) and (min-width: 1152px) {
+	.text {
+		font-size: 13px;
+	}
+	.sub {
+		height: 300px;
+		overflow:auto;
+	}
+}
+
+@media ( max-width :1336px) and (min-width: 1281px) {
+	.sub {
+		height: 300px;
+		overflow:auto;
+	}
+		.sub::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sub::-webkit-scrollbar-track {
+  background: #807d7d; 
+}
+ 
+/* Handle */
+.sub::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.sub::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+}
+
+@media ( max-width :1366px) and (min-width: 1337px) {
+	.sub {
+		height: 300px;
+		overflow:auto;
+	}
+	.sub::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sub::-webkit-scrollbar-track {
+  background: #807d7d; 
+}
+ 
+/* Handle */
+.sub::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.sub::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+}
+
+@media ( max-width :1440px) and (min-width: 1367px) {
+		.sub {
+		height: 300px;
+		overflow:auto;
+	}
+	.sub::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sub::-webkit-scrollbar-track {
+  background: #807d7d; 
+}
+ 
+/* Handle */
+.sub::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.sub::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+}
+
+@media ( max-width :1680px) and (min-width: 1441px) {
+		.sub {
+		height: 300px;
+		overflow:auto;
+	}
+	.sub::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sub::-webkit-scrollbar-track {
+  background: #807d7d; 
+}
+ 
+/* Handle */
+.sub::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.sub::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+}
+
+@media ( max-width :1900px) and (min-width: 1681px) {
+}
+
+@media ( max-width :1920px) and (min-width: 1901px) {
+}

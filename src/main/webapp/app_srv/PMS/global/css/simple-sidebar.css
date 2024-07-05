@@ -1,0 +1,193 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+/* added by pallavi */
+a#menu-toggle
+{
+	color: white;
+}
+.dropdown-menu.sidemenu {
+  position: relative !important;
+  top: 100%;
+  left: 0;
+  /* z-index: 1000; */
+  display: none;
+   float: none !important; 
+  min-width: 160px;
+ /*  padding: 5px 0;
+  margin: 2px 0 0; */
+   padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #dddddd !important;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.dropdown-menu.sidemenu>li{
+	
+   text-indent: 0px;
+    line-height: 40px;
+  
+}
+.dropdown-menu.sidemenu>li a:before{
+	font-family: 'FontAwesome';
+	content: '\f061';
+	display:inline;
+	padding-right:5px;
+	}
+.dropdown-menu.sidemenu>li>a {
+	display: block;
+	color:#555555;
+	/* color: #999999; */
+font-weight:bold;
+    background-color: #fcfcfc;
+}
+.dropdown-menu.sidemenu>li>a:hover,.dropdown-menu.sidemenu>li>a:focus {
+	 text-decoration: none;
+    color: #555555;
+    background-color: #dddddd !important;
+}
+.dropdown-menu.sidemenu>.active>a,.dropdown-menu.sidemenu>.active>a:hover,.dropdown-menu.sidemenu>.active>a:focus
+	{
+	color: #fff;
+	text-decoration: none;
+	background-color: #dddddd !important;
+}
+/* added by pallavi */
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+	border-right: 2px solid black;
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #fff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+      background-color: #4c9ed9;
+      border-bottom: 1px solid #00468c;
+}
+/* .sidebar-nav li div.dropdown.open{
+          border-top: 1px solid #00468c;
+} */
+
+.sidebar-nav li a {
+    display: block;
+    font-weight: bold;
+    color: black;
+    background-color: #4c9ed9;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: black;
+     background-color: #4c9ed9;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+     background-color: #4c9ed9;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}

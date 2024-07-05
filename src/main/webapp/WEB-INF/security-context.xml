@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:b="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+
+	<http  use-expressions="true" auto-config="false" entry-point-ref="loginUrlAuthEntryPoint">
+	 <intercept-url pattern="/GenerateOTP" access="permitAll" />
+	
+	<intercept-url pattern="/GenerateOTPForm" access="permitAll" />
+	
+	<intercept-url pattern="/GenOTP" access="permitAll" />
+	<!-- <intercept-url pattern="/VerifyOTP" access="permitAll"/> -->
+	<intercept-url pattern="/GetEmailIdOTP" access="permitAll" />
+		<intercept-url pattern="/EmailSendOTP" access="permitAll" />
+	<intercept-url pattern="/ForgotPassword" access="permitAll" />
+		<intercept-url pattern="/GetEmailId" access="permitAll" />
+		<intercept-url pattern="/EmailSend" access="permitAll" />
+		<intercept-url pattern="/Homepage" access="permitAll" />
+		<intercept-url pattern="/resources/**" access="permitAll"/>
+		<intercept-url pattern="/jcaptcha.jpg" access="permitAll"/>	
+		<intercept-url pattern="/accessDenied" access="permitAll"/>		
+		<!-- <intercept-url pattern="/login**" access="permitAll"/> 
+		<intercept-url pattern="/invalidSession*" access="isAnonymous()" />		-->	
+		
+		<intercept-url pattern="/admin/**" access="hasAnyAuthority('ROLE_ADMIN','ROLE_PREVIOUS_ADMINISTRATOR')" />
+		 <intercept-url pattern="/**" access="isAuthenticated()" />
+	 <access-denied-handler  ref="customAccessDeniedHandler"/>  
+ 	 <custom-filter position="FORM_LOGIN_FILTER" ref="customUsernamePasswordAuthFilter"/>
+ 	 <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" />
+ 	 <custom-filter position="SWITCH_USER_FILTER" ref="switchUserProcessingFilter" />
+
+	<logout invalidate-session="true" logout-success-url="/Homepage?logout=true"/>
+	
+	<csrf disabled="true"/>		
+		
+	<headers>
+        <frame-options policy="SAMEORIGIN" />
+    </headers>
+    <session-management session-authentication-strategy-ref="sas" />
+	</http>
+	
+	
+	
+	
+	
+	<!-- <http  use-expressions="true" auto-config="false" entry-point-ref="loginUrlAuthEntryPoint1">
+	 <intercept-url pattern="/GenerateOTP" access="permitAll" />
+	
+	
+		<intercept-url pattern="/Homepage" access="permitAll" />
+		
+	 <access-denied-handler  ref="customAccessDeniedHandler"/>  
+ 	 <custom-filter position="FORM_LOGIN_FILTER" ref="customUsernamePasswordAuthFilter"/>
+	<logout invalidate-session="true" logout-success-url="/Homepage?logout=true"/>
+	
+	<csrf disabled="true"/>		
+		
+	<headers>
+        <frame-options policy="SAMEORIGIN" />
+    </headers>
+    <session-management session-authentication-strategy-ref="sas" />
+	</http> -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<global-method-security pre-post-annotations="enabled"/>
+
+	<b:bean id="loginUrlAuthEntryPoint"
+		class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+		<b:constructor-arg value="/Homepage"></b:constructor-arg>
+	</b:bean>
+	
+	
+	<!--  <b:bean id="loginUrlAuthEntryPoint1"
+		class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+		<b:constructor-arg value="/GenerateOTPForm"></b:constructor-arg>
+	</b:bean>  -->
+	
+	
+	
+	<!--Making a new entry point at Generate OTP Form  -->
+
+	<!-- <b:bean id="loginUrlAuthEntryPoint1"
+		class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+		<b:constructor-arg value="/GenerateOTPForm"></b:constructor-arg>
+	</b:bean>
+	 -->
+	
+	
+	
+
+	<b:bean id="customUsernamePasswordAuthFilter" class="in.pms.login.util.CustomUsernamePasswordAuthFilter">
+		<b:property name="sessionAuthenticationStrategy" ref="sas" />
+		<b:property name="filterProcessesUrl" value="/login" />
+		
+		<b:property name="authenticationFailureHandler" ref="failureHandler" />
+		<b:property name="authenticationSuccessHandler" ref="customLoginSucessHandler" />
+		<b:property name="authenticationManager" ref="authManager"></b:property>
+	</b:bean>
+
+	<b:bean id="successHandler"
+		class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+		<b:property name="defaultTargetUrl" value="/dashboard"></b:property>
+	</b:bean>
+
+	<b:bean id="failureHandler"
+		class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+		<b:property name="defaultFailureUrl" value="/Homepage?error=true"></b:property>
+	</b:bean>
+
+	<authentication-manager id="authManager">
+		<authentication-provider user-service-ref="customUserDetailService">
+			<password-encoder ref="passwordEncoder"></password-encoder>
+		</authentication-provider>
+	</authentication-manager>
+
+
+	<!-- <b:bean id="passwordEncoder"
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<b:constructor-arg value="11" />
+	</b:bean> -->
+	
+	<b:bean id="passwordEncoder"
+		class="in.pms.login.util.CustomPasswordEncoder">
+		<b:constructor-arg value="11" />
+	</b:bean>
+	
+	<b:bean id="customUserDetailService" class="in.pms.login.service.CustomUserDetailsService"></b:bean>
+	
+	<b:bean name="customAccessDeniedHandler"  class="in.pms.global.misc.CustomAccessDeniedHandler"/>
+
+	<b:bean id="customLoginSucessHandler" class="in.pms.login.util.CustomLoginSucessHandler"/>
+ 
+<b:bean id="switchUserProcessingFilter" class="org.springframework.security.web.authentication.switchuser.SwitchUserFilter">
+    <b:property name="userDetailsService" ref="customUserDetailService"/>
+    <b:property name="switchUserUrl" value="/admin/impersonate"/>
+    <b:property name="targetUrl" value="/Homepage"/>
+    
+    
+    <b:property name="switchFailureUrl" value="/admin/switchUser"/>
+</b:bean>
+
+
+ <b:bean id="redirectSessionInformationExpiredStrategy"
+		class="org.springframework.security.web.session.SimpleRedirectSessionInformationExpiredStrategy">
+		<b:constructor-arg name="invalidSessionUrl" value="/Homepage" />
+	</b:bean>
+
+	<b:bean id="concurrencyFilter"
+		class="org.springframework.security.web.session.ConcurrentSessionFilter">
+		<b:constructor-arg name="sessionRegistry" ref="sessionRegistry" />
+		<b:constructor-arg name="sessionInformationExpiredStrategy"
+			ref="redirectSessionInformationExpiredStrategy" />
+	</b:bean>
+ 
+   <b:bean id="sas" 
+		class="org.springframework.security.web.authentication.session.CompositeSessionAuthenticationStrategy">	
+		
+		<b:constructor-arg>
+			<b:list>
+				<b:bean
+					class="org.springframework.security.web.authentication.session.ConcurrentSessionControlAuthenticationStrategy">
+					<b:constructor-arg ref="sessionRegistry" />
+					<b:property name="maximumSessions" value="-1" />
+					<b:property name="exceptionIfMaximumExceeded" value="true" />
+				</b:bean>
+				<b:bean
+					class="org.springframework.security.web.authentication.session.ChangeSessionIdAuthenticationStrategy ">
+				</b:bean>				
+			 	<b:bean
+					class="org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy">				
+				</b:bean> 
+				
+			</b:list>
+		</b:constructor-arg>
+	</b:bean>
+	<b:bean id="sessionRegistry" class="org.springframework.security.core.session.SessionRegistryImpl" />
+
+
+</b:beans>

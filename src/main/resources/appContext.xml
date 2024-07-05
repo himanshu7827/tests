@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd>
+ 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+ 		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="myEmf" />
+	</bean>
+	
+			<!--  Locale Change interceptor Start -->
+	
+	<bean id="messageSource"
+    class="org.springframework.context.support.ResourceBundleMessageSource">
+    <property name="basename" value="classpath:messages"/>
+    <property name="defaultEncoding" value="UTF-8" />
+	</bean>
+
+    
+   <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+        <property name="defaultLocale" value="en" />
+        <property name="cookieName" value="localeCookie"></property>
+        <property name="cookieMaxAge" value="3600"></property>
+    </bean>
+     
+    
+    <mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+		<property name="paramName" value="language" />
+		</bean>
+	</mvc:interceptors>
+     
+<!--  Locale Change interceptor End -->	
+
+	<context:component-scan base-package="in.pms.master.domain" />
+	<context:component-scan base-package="in.pms.master.service" />
+	<context:component-scan base-package="in.pms.master.dao" />
+	<context:component-scan base-package="in.pms.master.validator" />
+	<context:component-scan base-package="in.pms.master.controller" />
+
+	<context:component-scan base-package="in.pms.global.domain" />
+	<context:component-scan base-package="in.pms.global.service" />
+	<context:component-scan base-package="in.pms.global.dao" />
+	<!-- <context:component-scan base-package="in.pms.global.controller" /> -->
+	
+	
+	<context:component-scan base-package="in.pms.transaction.*" />
+	<context:component-scan base-package="in.pms.timesheet.*" /> <!--Timesheet - JAY -->
+	<context:component-scan base-package="in.pms.login.*" />
+	<context:component-scan base-package="in.pms.mail.*" />
+
+	<context:property-placeholder
+		ignore-unresolvable="true" ignore-resource-not-found="false"
+		location="classpath:regexValidation.properties" />
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
+	</bean>
+
+	<bean id="daoHelper" class="in.pms.global.dao.DaoHelper" />
+
+	<import resource="classpath:data-access.xml" />
+	
+	<bean class="com.octo.captcha.service.image.DefaultManageableImageCaptchaService" id="imageCaptchaService"/>
+	
+
+</beans>

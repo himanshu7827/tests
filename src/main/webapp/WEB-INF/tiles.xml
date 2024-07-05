@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="home.definition"
+		template="/app_srv/PMS/global/jsp/MainLayout_new.jsp">
+		<put-attribute name="header"
+			value="/app_srv/PMS/global/jsp/header_new1.jsp" />
+		<put-attribute name="lmenu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/app_srv/PMS/global/jsp/footer_new.jsp" />
+	</definition>
+	<definition name="base_new.definition"
+		template="/app_srv/PMS/global/jsp/MainLayout_in_new.jsp">
+		<put-attribute name="header"
+			value="/app_srv/PMS/global/jsp/header_in.jsp" />
+		<put-attribute name="lmenu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/app_srv/PMS/global/jsp/footer_in.jsp" />
+	</definition>
+	
+	<definition name="emptyDefinition"
+		template="/app_srv/PMS/global/jsp/EmptyLayout.jsp">	
+		<put-attribute name="body" value="" />		
+	</definition>
+	
+<definition name="emptyNewDefinition"
+		template="/app_srv/PMS/global/jsp/EmptyLayoutNew.jsp">
+		<put-attribute name="header"
+			value="/app_srv/PMS/global/jsp/header_empty.jsp" />	
+		<put-attribute name="lmenu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/app_srv/PMS/global/jsp/footer_in.jsp" />
+	</definition>
+
+
+	<definition name="Homepage" extends="home.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/mainbody.jsp" />
+	</definition>
+	<definition name="clientMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/clientMaster.jsp" />
+	</definition>
+
+	<definition name="employeeMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/employeeMaster.jsp" />
+	</definition>
+
+	<definition name="organisationMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/organisationMaster.jsp" />
+	</definition>
+	<definition name="proposalMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/proposalMaster.jsp" />
+	</definition>
+
+	<definition name="BudgetHeadMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/BudgetHeadMaster.jsp" />
+	</definition>
+
+	<definition name="groupMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/groupMaster.jsp" />
+	</definition>
+	
+	
+	<!-- Added by Himanshu on 10-05-2024 -->
+	<definition name="TimeSheetMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/TimeSheetMaster.jsp" />
+	</definition>
+
+	<definition name="RoleMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/RoleMaster.jsp" />
+	</definition>
+
+	<definition name="ProcessMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ProcessMaster.jsp" />
+	</definition>
+
+	<definition name="documentMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/documentMaster.jsp" />
+	</definition>
+
+	<!-- <definition name="documentMaster" extends="base_new.definition"> <put-attribute 
+		name="body" value="/app_srv/PMS/master/jsp/documentMaster.jsp" /> </definition> -->
+
+	<definition name="docStageMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/docStageMaster.jsp" />
+	</definition>
+	<definition name="docStageMapping" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/docStageMapping.jsp" />
+	</definition>
+
+	<definition name="empTypeMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/empTypeMaster.jsp" />
+	</definition>
+
+	<definition name="designationMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/DesignationMaster.jsp" />
+	</definition>
+
+	<definition name="clientContactPersonMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/clientContactPersonMaster.jsp" />
+	</definition>
+
+	<definition name="projectModuleMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/projectModuleMaster.jsp" />
+	</definition>
+
+	<definition name="projectInvoiceMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/projectInvoiceMaster.jsp" />
+	</definition>
+
+	<definition name="projectPaymentScheduleMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/projectPaymentScheduleMaster.jsp" />
+	</definition>
+	
+	<definition name="changeProjectClientContactPerson" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/changeProjectClientContactPerson.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="dashboard" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/dashboard.jsp" />
+	</definition>
+	<definition name="uploadProjectDocument" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/uploadProjectDocument.jsp" />
+	</definition>
+
+
+	<definition name="uploadProjectDocumentEmpty" extends="emptyNewDefinition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/uploadProjectDocument.jsp" />
+	</definition>
+
+	<definition name="uploadProposalDocument" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/uploadProposalDocument.jsp" />
+	</definition>
+
+	<definition name="accessDenied" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/accessDenied.jsp" />
+	</definition>
+
+	<definition name="ThrustAreaMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ThrustAreaMaster.jsp" />
+	</definition>
+	<definition name="ProjectMilestoneMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ProjectMilestone.jsp" />
+	</definition>
+
+	<definition name="ProjectMilestoneData" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ProjectMilestoneEdit.jsp" />
+	</definition>
+
+	<definition name="projectPaymentReceived" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/projectPaymentReceived.jsp" />
+	</definition>
+
+
+
+	<definition name="EmployeeSalaryMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/EmployeeSalary.jsp" />
+	</definition>
+
+	<definition name="ProjectMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ProjectMaster.jsp" />
+	</definition>
+
+	<definition name="ProjectBudgetMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ProjectBudgetMaster.jsp" />
+	</definition>
+
+	<definition name="error" extends="base_new.definition">
+		<put-attribute name="body" value="/app_srv/PMS/global/jsp/error.jsp" />
+	</definition>
+
+	<definition name="changePassword" extends="base_new.definition">
+		<put-attribute name="body" value="/app_srv/PMS/global/jsp/changePassword.jsp" />
+	</definition>
+	
+	<definition name="documentFormat" extends="base_new.definition">
+		<put-attribute name="body" value="/app_srv/PMS/master/jsp/documentFormat.jsp" />
+	</definition>
+	
+	<definition name="expenditureHeadMaster" extends="base_new.definition">
+		<put-attribute name="body" value="/app_srv/PMS/master/jsp/expenditureHead.jsp" />
+	</definition>
+	
+	<definition name="projectExpenditureDetails" extends="base_new.definition">
+		<put-attribute name="body" value="/app_srv/PMS/master/jsp/projectExpenditureDetails.jsp" />
+	</definition>
+	
+	<definition name="employeeRoleMaster" extends="base_new.definition">
+		<put-attribute name="body" value="/app_srv/PMS/master/jsp/employeeRoleMaster.jsp" />
+	</definition>
+ <definition name="rolePrivilege" extends="base_new.definition">
+        	<put-attribute name="body" value="/app_srv/PMS/global/jsp/rolePrivilege.jsp" />
+    </definition>
+    
+   <definition name="parentOrganisationMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/parentOrganisationMaster.jsp" />
+	</definition>
+	
+	<definition name="activityMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ActivityMaster.jsp" />
+	</definition>
+	
+	<definition name="subActivityMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/SubActivityMaster.jsp" />
+	</definition>
+	
+	<definition name="projectTeamDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ProjectTeamDetails.jsp" />
+	</definition>
+	<definition name="projectDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/projectDetails.jsp" />
+	</definition>
+	<definition name="TaskDetailsMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/TaskDetailsMaster.jsp" />
+	</definition>
+	
+	<definition name="TaskDetailsMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/TaskDetailsMaster.jsp" />
+	</definition>
+	<definition name="employeeDashboard" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/employeeDashboard.jsp" />
+	</definition>
+	<definition name="EmployeeRoleMapping" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/EmployeeRolesMapping.jsp" />
+	</definition>
+	<definition name="ViewProjectDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ViewProjectDetails.jsp" />
+	</definition>
+	
+		<definition name="applicationBasicDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/applicationBasicDetails.jsp" />
+	</definition>
+	
+	<definition name="showProjectDocumentRevision" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/showProjectDocumentRevision.jsp" />
+	</definition>
+	
+	<definition name="ViewProjectDetailsWithoutHeader" extends="emptyDefinition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ViewProjectDetails.jsp" />
+	</definition>
+	<definition name="ManpowerRequirement" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ManpowerRequirement.jsp" />
+	</definition>
+	
+	<definition name="ProcessFlow" extends="base_new.definition">
+        	<put-attribute name="body" value="/app_srv/PMS/global/jsp/ProcessFlow.jsp" />
+    </definition>
+	<definition name="manpowerUtilization" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/manpowerUtilization.jsp" />
+	</definition>
+	<!-- Manpower Expenses page added by devesh on 05-04-24 -->
+	<definition name="manpowerExpenses" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/manpowerExpenses.jsp" />
+	</definition>
+	<!-- End of code -->
+	
+	<definition name="documentDetail" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ViewDocumentDetails.jsp" />
+	</definition>
+	<definition name="documentDetailWithoutHeader" extends="emptyDefinition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ViewDocumentDetails.jsp" />
+	</definition>
+	
+	
+	<definition name="workflowConfigurationMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/workflowConfigurationMaster.jsp" />
+	</definition>
+	<definition name="ApplicationList" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ApplicationList.jsp" />
+	</definition>
+	<definition name="gcDashboard" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/gcDashboard.jsp" />
+	</definition>
+	<definition name="edDashboard" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/edDashboard.jsp" />
+	</definition>
+	
+	<definition name="ProjectList" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/AllProjectsList.jsp" />
+	</definition>
+	<definition name="showRolespopup" extends="emptyDefinition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ChooseDefaultRole.jsp" />
+	</definition> 
+	
+	<definition name="updateEmployeeMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/updateEmployeeMaster.jsp" />
+	</definition>
+	<definition name="thirdPartyMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/thirdPartyMaster.jsp" />
+	</definition>
+	<definition name="hrDashboard" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/hrDashboard.jsp" />
+	</definition>
+	<definition name="SkillMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/SkillMaster.jsp" />
+	</definition>
+	
+	 <definition name="ForgotPasswordForm" extends="emptyDefinition">
+        <put-attribute name="body" value="/app_srv/PMS/master/jsp/ForgotPasswordForm.jsp" />
+    </definition>
+    
+    <definition name="proposalDocumentDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ViewProposalDocumentDetails.jsp" />
+	</definition>
+	
+	 <definition name="projectTeamMapping" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/projectTeamMapping.jsp" />
+	</definition>
+	
+	 <definition name="collaborativeOrgDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/collaborativeOrgDetails.jsp" />
+	</definition>
+	<definition name="proposalDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/proposalDetails.jsp" />
+	</definition>
+	<definition name="showProposalDocumentRevision" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/showProposalDocumentRevision.jsp" />
+	</definition>
+	<definition name="MilestoneReviewMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/MilestoneReviewMaster.jsp" />
+	</definition>
+    <definition name="MilestoneReviewDetailMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/MilestoneReviewDetail.jsp" />
+	</definition>
+    
+	 <definition name="Privilege" extends="base_new.definition">
+        	<put-attribute name="body" value="/app_srv/PMS/global/jsp/Privilege.jsp" />
+    </definition>
+    <definition name="proposalList" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/proposalList.jsp" />
+	</definition>
+	<definition name="InternalLogin" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/InternalLogin.jsp" />
+	</definition>
+		<definition name="previewNSubmitProposal" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/previewNSubmitProposal.jsp" />
+	</definition>
+	<definition name="EDApplicationList" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/EDApplicationList.jsp" />
+	</definition>
+	<definition name="AnswerMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/AnswerMaster.jsp" />
+	</definition>
+	<definition name="QuestionMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/QuestionMaster.jsp" />
+	</definition>
+	<definition name="ExitInterviewMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/ExitInterviewMaster.jsp" />
+	</definition>
+	<definition name="patchTracker" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/patchTracker.jsp" />
+	</definition>
+	<definition name="postTrackerMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/postTrackerMaster.jsp" />
+	</definition>
+	<definition name="ExitInterview" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/ExitInterviewByFlaNdSla.jsp" />
+	</definition>
+	
+		<definition name="ExitInterviewByHr" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/ExitInterviewByHr.jsp" />
+	</definition>
+	<definition name="endUserMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/EndUserMaster.jsp" />
+	</definition>
+	
+	<definition name="AddNewReport"  extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/AddNewReport.jsp" />
+	</definition>
+	
+	<definition name="ReportEditorMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ReportEditorMaster.jsp" />
+	</definition>
+	
+	
+	<definition name="PMOApplicationList" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/PMOApplicationList.jsp" />
+	</definition>
+		<definition name="PMODashboard" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/PMODashboard.jsp" />
+	</definition>
+	
+	<definition name="PMOApplicationList" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/PMOApplicationList.jsp" />
+	</definition>
+		<definition name="PMODashboard" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/PMODashboard.jsp" />
+	</definition>
+	
+	 <definition name="projectClosure" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/projectClosure.jsp" />
+	</definition>
+	
+	<definition name="progressReport" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/progressReport.jsp" />
+	</definition>
+	
+	<definition name="deploymentTotDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/deploymentTotDetails.jsp" />
+	</definition>
+	
+	
+	<definition name="releaseEmployee" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/releaseEmployee.jsp" />
+	</definition>
+	
+	<definition name="approvedJob" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/approvedJob.jsp" />
+	</definition>
+	
+	<definition name="copyRight" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/CopyRight.jsp" />
+	</definition>
+
+	<definition name="appreciationLetter" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/AppreciationLetter.jsp" />
+	</definition>
+
+
+	<definition name="Others" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/Others.jsp" />
+	</definition>
+	
+	<definition name="mouCollaboration" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/MouCollaboration.jsp" />
+	</definition>
+	
+	<definition name="viewApprovedJob" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/viewApprovedJob.jsp" />
+	</definition>
+	
+	<definition name="productServiceDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/productServiceDetails.jsp" />
+	</definition>
+	
+	<definition name="talks" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/Talks.jsp" />
+	</definition>
+	
+	<definition name="additionalQualification" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/AdditionalQualification.jsp" />
+	</definition>
+	
+	<definition name="ProjectPublicationDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/ProjectPublicationDetails.jsp" />
+	</definition>
+	
+	<definition name="PatentDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/PatentDetails.jsp" />
+	</definition>
+	
+	
+		<definition name="HighlightDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/HighlightDetails.jsp" />
+	</definition>
+	
+		<definition name="ProjectInnovations" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/ProjectInnovations.jsp" />
+	</definition>
+		<definition name="ProductsDeveloped" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/ProductsDeveloped.jsp" />
+	</definition>
+		<definition name="ProjectOthers" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/ProjectOthers.jsp" />
+	</definition>
+
+		<definition name="SeminarEvent" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/SeminarEvent.jsp" />
+	</definition>
+
+	<definition name="AwardWon" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/AwardWon.jsp" />
+	</definition>
+	
+	<definition name="MediaDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/Media.jsp" />
+	</definition>
+	
+	<definition name="progressPreview" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/progressPreview.jsp" />
+	</definition>
+	
+	<definition name="jobTitle" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/JobTitle.jsp" />
+	</definition>
+	
+	<definition name="DocumentImages" extends="emptyDefinition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/DocumentImages.jsp" />
+	</definition>
+	<definition name="groupProgressPreview" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/groupProgressPreview.jsp" />
+	</definition>
+	
+	<definition name="Action" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/Action.jsp" />
+	</definition>
+		<definition name="designationForClient" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/designationForClient.jsp" />
+	</definition>
+	
+	<definition name="projectCategorydesignationMapping" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/projectCategoryDesignationMapping.jsp" />
+	</definition>
+	
+	<definition name="GroupMonthlyReport" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/GroupMonthlyReport.jsp" />
+	</definition>
+	
+	<definition name="ApprovalMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ApprovalMaster.jsp" />
+	</definition>
+	
+	<definition name="workFlow" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/WorkflowMaster.jsp" />
+	</definition>
+	
+	<definition name="proceedingDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/ProceedingDetails.jsp" />
+	</definition>
+	
+	<definition name="GenerateReport" extends="base_new.definition">
+	<put-attribute name="body"
+	value="/app_srv/PMS/transaction/jsp/GenerateReport.jsp" />
+	</definition>
+	
+	<definition name="completedProject" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/completedProject.jsp" />
+	</definition>
+			<definition name="versionDetails" extends="base_new.definition">
+		<put-attribute name="body" value="/app_srv/PMS/global/jsp/versionDetails.jsp" />
+	</definition>
+	
+	<definition name="EmptyPage" extends="emptyDefinition">
+		<put-attribute name="body" value="/app_srv/PMS/transaction/jsp/EmptyPage.jsp" />
+	</definition>
+	
+	<definition name="ProjectRoleMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/ProjectRoleMaster.jsp" />
+	</definition>
+	
+	<definition name="projectPaymentScheduleMasterdue" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/projectPaymentScheduleMasterdue.jsp" />
+	</definition>
+	
+	<definition name="totDetails" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/TotDetails.jsp" />
+	</definition>
+	
+	<definition name="generateMonthlyBirthDayReport" extends="base_new.definition">
+	<put-attribute name="body"
+	value="/app_srv/PMS/transaction/jsp/generateMonthlyBirthDayReport.jsp" />
+	</definition>
+	
+	<definition name="generateClientSiteEmpReport" extends="base_new.definition">
+	<put-attribute name="body"
+	value="/app_srv/PMS/transaction/jsp/generateClientSiteEmpReport.jsp" />
+	</definition>
+	<definition name="roleReport" extends="base_new.definition">
+        	<put-attribute name="body" value="/app_srv/PMS/global/jsp/RoleReport.jsp" />
+    </definition>
+	
+		<definition name="pLDashboard" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/pLDashboard.jsp" />
+	</definition>
+	  <definition name="MilestoneExceededDeadlineDetailMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/MilestoneExceededDeadlineDetail.jsp" />
+	</definition>
+	 <definition name="MilestoneDueInOneMonthDetailMaster" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/MilestoneDueInOneMonthDetail.jsp" />
+	</definition>
+	 <definition name="monthlyProgressForprojects" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/monthlyProgressForprojects.jsp" />
+	</definition>
+	
+	<definition name="allSessions" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/transaction/jsp/allSessions.jsp" />
+	</definition>
+	
+	 <definition name="MilestoneExceededDeadlineForEDDashboard" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/MilestoneExceededDeadlineForEDDashboard.jsp" />
+	</definition>
+	
+	<definition name="MilestoneDueInOneMonthForED" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/MilestoneDueInOneMonthForED.jsp" />
+	</definition>
+	
+		<definition name="gcFinanceDashboard" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/global/jsp/dashboard/gcFinanceDashboard.jsp" />
+	</definition>
+	
+	<definition name="NewsLetterFilter" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/NewsLetterFilter.jsp" />
+	</definition>
+	<definition name="NewsLetterJSP" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/Newsletter.jsp" />
+	</definition>
+	
+	<definition name="relievedEmployee" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/relievedEmployee.jsp" />
+	</definition>
+	
+		<definition name="generateEmployeeDetails" extends="base_new.definition">
+	<put-attribute name="body"
+	value="/app_srv/PMS/transaction/jsp/generateEmployeeDetails.jsp" />
+	</definition>
+	
+	<definition name="underApprovalProjects" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/underApprovalProjects.jsp" />
+	</definition>
+	
+	<definition name="previewProject" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/previewProject.jsp" />
+	</definition>
+	
+	<definition name="MilestoneType" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/MilestoneType.jsp" />
+	</definition>
+	
+	<definition name="underClosureProjects" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/underClosureProjects.jsp" />
+	</definition>
+	
+	<definition name="viewProjectClosure" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/master/jsp/viewProjectClosure.jsp" />
+	</definition>
+	
+	<!--Start Timesheet Tiles - JAY -->
+	<definition name="timesheethome" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/timesheet/jsp/timesheethome.jsp" />
+	</definition>
+	
+	<definition name="reports" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/timesheet/jsp/reports.jsp" />
+	</definition>
+	
+	<definition name="individualReports" extends="base_new.definition">
+		<put-attribute name="body"
+			value="/app_srv/PMS/timesheet/jsp/individualReports.jsp" />
+	</definition>
+	<!--End Timesheet Tiles - JAY -->
+	
+	 <definition name="GenerateOTPForm" extends="emptyDefinition">
+        <put-attribute name="body" value="/app_srv/PMS/master/jsp/GenerateOTPForm.jsp" />
+    </definition>
+    
+     <!-- Add new menu button for All Project report By varun -->
+	 <definition name="projectDetailsReport" extends="base_new.definition">
+        <put-attribute name="body" value="/app_srv/PMS/transaction/jsp/projectDetailsReport.jsp" />
+    </definition>
+	
+</tiles-definitions>
